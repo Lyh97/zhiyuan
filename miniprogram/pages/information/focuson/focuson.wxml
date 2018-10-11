@@ -1,0 +1,23 @@
+<!--pages/information/focuson/focuson.wxml-->
+<view class="container">
+  <view>
+    <view class="con-image">
+      <image src="{{title.imageUrl}}" style='width:100%;height:300rpx;'></image>
+    </view>
+    <view style='width:100%;height:25rpx;background-color:#eee;'></view>
+    <view style="padding: 20rpx 20rpx;font-size:30rpx;">🔥课程简介:</view><view class="con-title">{{title.title}}</view>
+    <view style='width:100%;height:25rpx;background-color:#eee;'></view>
+    <view style="padding: 20rpx 20rpx;font-size:30rpx;">👨‍🏫讲师:</view>
+    <view style='padding: 0rpx 20rpx; font-size:30rpx;'>🐮👨邓成(Lawrence)</view>
+    <view style='padding: 0rpx 20rpx; font-size:25rpx;'>金牌讲师，沈阳工业大学副教授，软件学院副院长兼软件1502班班长</view>
+    <view style='width:100%;height:25rpx;background-color:#eee;margin-top:10rpx;'></view>
+    <view style="padding: 20rpx 20rpx;font-size:30rpx;">📖课程章节:</view>
+    <view wx:for="{{title.classtitleArray}}">
+      <view class='con-cla-tit'>➡️  {{item.tit}}</view>
+    </view>
+    <view class="con-bottom">
+      <button class="weui-btn" type="primary" style="width:98%;margin: 1%;" >立即学习</button>
+    </view>
+  </view>
+</view>
+

@@ -11,17 +11,19 @@
     "pages/account/account",
     "pages/course/course",
     "pages/information/information",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/information/focuson/focuson"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#000030",
     "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "backgroundColor": "#f6f8f9",
+    "selectedColor": "rgb(71, 255, 47)",
     "list": [
       {
         "pagePath": "pages/index/index",
