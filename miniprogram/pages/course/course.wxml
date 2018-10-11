@@ -1,35 +1,19 @@
 <view>
   <view class="weui-panel weui-panel_access">
       <view class="weui-panel__bd">
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <navigator wx:for="{{ courses }}" url="{{ item.url }}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
               <view class="weui-media-box__hd weui-media-box__hd_in-appmsg course_item_image">
-                  <image class="weui-media-box__thumb" src="{{icon20}}" />
+                <image class="weui-media-box__thumb" src="{{item.img}}"/>
               </view>
               <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                   <view class="weui-media-box__title">
-                    1元学习软件测试基础+面试技巧
+                    {{ item.title }}
                   </view>
                   <view class="course_item_teacher">
-                    邓老师
+                    {{ item.teacher }}
                   </view>
                   <view class="course_item_people">
-                    7708人在学 <span class="course_item_money">{{money}}</span>
-                  </view>
-              </view>
-          </navigator>
-          <navigator url="../../pages/article/article" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg course_item_image">
-                <image class="weui-media-box__thumb" src="{{icon60}}"/>
-              </view>
-              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                  <view class="weui-media-box__title">
-                    Python高级开发/ Flask 爬虫/ Openstack Django
-                  </view>
-                  <view class="course_item_teacher">
-                    黄老师
-                  </view>
-                  <view class="course_item_people">
-                    3305人在学 <span class="course_item_money">{{money}}</span>
+                    {{ item.acount }}人在学 <span class="course_item_money">{{item.money}}</span>
                   </view>
               </view>
           </navigator>

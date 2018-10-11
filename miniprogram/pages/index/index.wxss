@@ -27,7 +27,7 @@ page,
   border-radius: 50px;
 }
 .home_head {
-  margin-top: 5rpx;
+  margin-top: 10rpx;
   padding: 0px 20px;
   position: inherit;
 }

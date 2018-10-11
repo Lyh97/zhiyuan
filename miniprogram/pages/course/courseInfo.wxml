@@ -1,0 +1,57 @@
+<!--pages/course/courseInfo.wxml-->
+<view class="course_detail">
+  <view class="section tc course_video">
+    <video id="myVideo" src="{{ course.video_img }}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    <view class='course_title'>
+      <text>{{ course.title }}</text>
+    </view>
+    <view class='course_info'>
+      <text>{{ course.info }}</text>
+    </view>
+    <view class='course_info'>
+      <div class="course_tag">特价优惠</div>
+      <div class="course_money"> ¥0</div>
+    </view>
+  </view>
+  <view class='course_comments'>
+    <view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px); background-color:#FFF;"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <view class="weui-media-box weui-media-box_text">
+                  
+                  <view class="weui-media-box__title weui-media-box__title_in-text"><image class="course_user_img" src='http://img0.imgtn.bdimg.com/it/u=1763044357,684998663&fm=26&gp=0.jpg'>
+                  </image>
+                    Lawrance
+                  </view>
+                    <view class="weui-media-box__desc">对我的帮助非常大！</view>
+                  </view>
+                  <view class="weui-media-box weui-media-box_text">
+                      <view class="weui-media-box__title weui-media-box__title_in-text">
+                        <image class="course_user_img" src='http://img0.imgtn.bdimg.com/it/u=2729595223,1846007871&fm=26&gp=0.jpg'>
+                        </image>
+                        cunrei
+                      </view>
+                      <view class="weui-media-box__desc">很不错的课程，邓老师最帅！</view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <image class="course_info_img" src='http://img.mp.itc.cn/upload/20170110/abb7b847259a44e8838c0c402e1b0773_th.jpg'></image>
+                  <image class="course_info_img" src='http://www.xiazaiba.com/uploadfiles/content/2016/1229/water_1483001137135290802688.png'></image>
+                  <image class="course_info_img" src='http://d.hiphotos.baidu.com/exp/w=500/sign=b0c57143dd0735fa91f04eb9ae500f9f/a8773912b31bb051e3c460703f7adab44bede082.jpg'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+  </view>
+</view>

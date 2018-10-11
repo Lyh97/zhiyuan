@@ -11,7 +11,8 @@
     "pages/course/course",
     "pages/information/information",
     "pages/article/article",
-    "pages/information/focuson/focuson"
+    "pages/information/focuson/focuson",
+    "pages/course/courseInfo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -22,7 +23,7 @@
   },
   "tabBar": {
     "backgroundColor": "#f6f8f9",
-    "selectedColor": "rgb(71, 255, 47)",
+    "selectedColor": "#d81e06",
     "list": [
       {
         "pagePath": "pages/index/index",
