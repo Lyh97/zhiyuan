@@ -1,1 +1,106 @@
 /* pages/information/information.wxss */
+.userinfo {
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 150rpx;
+  display: inline-block;
+}
+.info-right {
+  display: inline-block;
+}
+.info-child {
+  position: relative;
+  top: -25rpx;
+  display: inline-block;
+  margin-left: 50rpx;
+}
+.userpickname {
+  color: gray;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.usertype {
+  width: 100%;
+  height: 125rpx;
+}
+.flex-item {
+  text-align: center;
+  width: 32%;
+  border-right: 2px solid #eee;
+  display: inline-block;
+  font-size: 35rpx;
+}
+.flex-item3 {
+  text-align: center;
+  width: 33%;
+  display: inline-block;
+  font-size: 35rpx;
+}
+.userFFF {
+  width: 100%;
+  margin-top: -40rpx;
+  background-color: #eee;
+  height: 30rpx;
+}
+.user-tab {
+  width: 100%;
+  height: 35rpx;
+}
+.tab-left {
+  font-size: 33rpx;
+  display: inline-block;
+  position: absolute;
+  left: 35rpx;
+  margin-top: 38rpx;
+}
+.tab-right {
+  font-size: 25rpx;
+  color: gray;
+  display: inline-block;
+  position: absolute;
+  right: 35rpx;
+  margin-top: 42rpx;
+}
+.user-classes {
+  margin-top: 40rpx;
+  padding-top: 135rpx;
+}
+.classes-l {
+  position: absolute;
+  left: 5%;
+  margin-top: -42rpx;
+}
+.classes-t {
+  font-size: 28rpx;
+}
+.classes-b {
+  font-size: 24rpx;
+  color: rgb(71, 255, 47);
+  margin-top: 42rpx;
+}
+.classes-r {
+  width: 250rpx;
+  height: 108rpx;
+  position: absolute;
+  right: 5%;
+  background-color: yellow;
+  margin-top: -42rpx;
+}
+.classes-line {
+  background-color: #eee;
+  width: 90%;
+  height: 5rpx;
+  position: absolute;
+  left: 5%;
+  margin-top: 92rpx;
+}
+
+.userinfo .icon {
+    position: absolute;
+    height: 130rpx;
+    width: 130rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 35rpx;
+}
+

@@ -1,3 +1,34 @@
-<view>
-  消息
+<view class="container">
+  <view class="info-right">
+    <view class='userinfo'>
+    <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    <view class='icon'/>
+    </view>
+    <view class='info-child'>
+      <open-data type="userNickName" style="margin-left:30rpx;font-size:50rpx;"></open-data>
+      <view class="userpickname">2017年加入，我要好好学习天天向上～</view>
+    </view>
+  </view>
+  <view class="usertype" style="flex-direction:row;">
+    <view class="flex-item"><navigator url='focuson/focuson' hover-class="none">我的关注</navigator></view>
+    <view class="flex-item"><navigator url='focuson/focuson' hover-class="none">我的收藏</navigator></view>
+    <view class="flex-item3"><navigator url='focuson/focuson' hover-class="none">我的下载</navigator></view>
+  </view>
+  <view class="userFFF"></view>
+  <view class="usertab" style="flex-direction:row;">
+    <view class="tab-left">关注的课程</view>
+    <view class="tab-right"><navigator url='focuson/focuson' hover-class="none">查看全部 > </navigator></view>
+  </view>
+  <view class="user-classes" wx:for="{{DataArray}}">
+  <navigator url='{{item.url}}' hover-class="none">
+    <view class='classes-l'>
+      <view class='classes-t'>{{item.Name}}</view>
+      <view class='classes-b'>{{item.Count}}</view>
+    </view>
+    <view class='classes-r'>
+      <image src="{{item.imageUrl}}" style='width:250rpx;height:119rpx;'></image>
+    </view>
+    <view class='classes-line'></view>
+  </navigator>
+  </view>
 </view>

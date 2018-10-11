@@ -1,0 +1,22 @@
+/* pages/information/focuson/focuson.wxss */
+.con-image {
+  width: 100%;
+  height: 300rpx;
+  /* background-color: yellow; */
+}
+.con-title {
+  /* background-color: blue; */
+  padding: 10rpx 20rpx;
+  font-size: 35rpx;
+  color: gray;
+}
+.con-bottom {
+  position: absolute;
+  top: 99%;
+  height: 80rpx;
+  width: 100%;
+}
+.con-cla-tit {
+  padding: 10rpx 20rpx;
+  font-size: 30rpx;
+}

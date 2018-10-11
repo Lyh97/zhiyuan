@@ -1,43 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-
+<view class="container" style='width:100%;'>
   <!-- 用户 openid -->
-  <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-avatar"
-      style="background-image: url({{avatarUrl}})"
-    ></button>
-    <view>
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+  <view class="info-right">
+    <view class='userinfo'>
+    <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    <view class='icon'/>
+    </view>
+    <view class='info-child'>
+      <open-data type="userNickName" style="margin-left:30rpx;font-size:50rpx;"></open-data>
+      <view class="userpickname">2017年加入，我要好好学习天天向上～</view>
     </view>
   </view>
-
-
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
-    </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
+  <view class="user-class"><text decode="{{true}}">📒&nbsp;&nbsp;我的课程</text><view style="float:right;color:darkgray">></view></view>
+  <view style='height:40rpx;width:100%;'></view>
+  <view class="user-items" wx:for="{{useritemArray}}">
+    <text decode="{{true}}">{{item.icon}}&nbsp;&nbsp;{{item.title}}</text><view style="float:right;color:darkgray">></view>
   </view>
-
-
-  <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
-      <text>前端操作数据库</text>
-    </navigator>
-  </view>
-
-  <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
-      <text>快速新建云函数</text>
-    </navigator>
-  </view>
-
+  <view style='height:40rpx;width:100%;'></view>
+  <view class='user-classb'><text decode="{{true}}">🔧&nbsp;&nbsp;个性化</text><view style="float:right;color:darkgray">></view></view>
 </view>
