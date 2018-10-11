@@ -24,7 +24,7 @@ Page({
       Array2: {
         Name: "C++", imageUrl: "/static/image/ccc.png", contxt: "math",
         title: "C++之老油条--邓成！",
-        classtitleArray: [{ tit: "1.尼古拉斯·宇航自传" }, { tit: "2.尼古拉斯·宇航自传" }, { tit: "3.尼古拉斯·宇航自传" }]
+        classtitleArray: [{ tit: "1.尼古拉斯·宇航自传" }, { tit: "2.宇航·斯坦森" }, { tit: "3.勒布朗·詹宇航" }]
       }
     }
   },
