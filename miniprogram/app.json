@@ -10,7 +10,8 @@
     "pages/account/account",
     "pages/course/course",
     "pages/information/information",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/information/focuson/focuson"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
