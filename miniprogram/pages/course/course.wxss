@@ -1,1 +1,17 @@
 /* pages/course/course.wxss */
+.course_item_image {
+  height: 70px;
+  width: 70px;
+}
+.course_item_teacher {
+  font-size: 12px;
+  color: #999;
+}
+.course_item_people {
+  font-size: 12px;
+  color: #999;
+}
+.course_item_money {
+  float: right;
+  color: #d81e06;
+}

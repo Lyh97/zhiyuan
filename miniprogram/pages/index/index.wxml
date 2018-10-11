@@ -21,84 +21,105 @@
                 </block>
                 <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
-            <view class="weui-tab__panel home_body">
-                <!-- 个性推荐页 -->
-                <view class="home_persion">
-                    <view class="home_notable" hidden="{{activeIndex != 0}}">
-                      <swiper indicator-dots="{{indicatorDots}}"
-                        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                        <block wx:for="{{imgUrls}}">
-                          <swiper-item>
-                            <image src="{{item}}" class="slide-image" width="355" height="150"/>
-                          </swiper-item>
-                        </block>
-                      </swiper>
-                      <view class="home_remen">
-                        <view class="home_remen_title">
-                          <span>
-                            <image class="home_remenIcon" src='../../static/image/redian.png'>
-                            </image>
-                          </span>今日热门
-                        </view>
-                        <view class="home_remen_body">
-                            <view>
-                              <image class='home_remen_point' src='../../static/image/point.png'>
-                              </image>
-                              互联网是怎么和广告业抢饭碗的</view>
-                            <view>
-                              <image class='home_remen_point' src='../../static/image/point.png'>
-                              </image>
-                              软件学院哪位老师最厉害</view>
-                        </view>
+            
+              <!-- 个性推荐页 -->
+              <view class="weui-tab__panel home_body home_persion">
+              
+                  <view class="home_notable" hidden="{{activeIndex != 0}}">
+                    <swiper indicator-dots="{{indicatorDots}}"
+                      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                      <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+                        </swiper-item>
+                      </block>
+                    </swiper>
+                    <view class="home_remen">
+                      <view class="home_remen_title">
+                        <span>
+                          <image class="home_remenIcon" src='../../static/image/redian.png'>
+                          </image>
+                        </span>今日热门
                       </view>
-                      <view class='home_info'>
-                        <view class="home_info_item">
-                          <view class="home_info_item_text">
-                            <view class="home_info_item_title">
-信息科学与工程学院开展“工大教师初心”大学习大讨论活动                 
-                            </view>
-                            <view class="home_info_item_body">
-9月26日，副校长何又春深入信息学院计算机教研室参加“工大教师之初心”大学习大讨论活动。信息学院党委书记...
-                            </view>
+                      <view class="home_remen_body">
+                          <view>
+                            <image class='home_remen_point' src='../../static/image/point.png'>
+                            </image>
+                            <a href="javascript:void(0);">互联网是怎么和广告业抢饭碗的</a>
                           </view>
-                          <image class="home_info_item_img" src='../../static/image/info1.jpg'>
-                          </image>
-                        </view>
-                        
-                        
-                        <view class="home_info_item">
-                          <view class="home_info_item_text">
-                            <view class="home_info_item_title">
-学校召开中共沈阳工业大学第十二届委员会第三次全体会议                  
-                            </view>
-                            <view class="home_info_item_body">
-10月9日上午，中共沈阳工业大学第十二届委员会第三次全体会议在校部五楼会议室召开。会议的主要任务是...
-                            </view>
+                          <view>
+                            <image class='home_remen_point' src='../../static/image/point.png'>
+                            </image>
+                            <a href="http://www.baidu.com">
+                              软件学院哪位老师最厉害
+                            </a>
                           </view>
-                          <image class="home_info_item_img" src='../../static/image/info2.jpg'>
-                          </image>
-                        </view>
-
-
-                        <view class="home_info_item">
-                          <view class="home_info_item_text">
-                            <view class="home_info_item_title">
-学校举办“将改革开放进行到底”青年学生宣讲会                  
-                            </view>
-                            <view class="home_info_item_body">
-9月26日、27日，学校举办了“将改革开放进行到底”青年学生系列宣讲会。活动以改革开放40周年中国的变化与发展...
-                            </view>
-                          </view>
-                          <image class="home_info_item_img" src='../../static/image/info3.jpg'>
-                          </image>
-                        </view>
                       </view>
                     </view>
+                    <view class='home_info'>
+                      <navigator wx:for="{{ homeInfo }}" url="{{ item.url }}">
+                        <view class="home_info_item">
+                          <view class="home_info_item_text">
+                            <view class="home_info_item_title">
+                              {{ item.title }}                 
+                            </view>
+                            <view class="home_info_item_body">
+                              {{ item.body }}
+                            </view>
+                          </view>
+                          <image class="home_info_item_img" src='{{ item.img }}'>
+                          </image>
+                        </view>
+                      </navigator>
+                    </view>
+              </view>
+
+              <!-- 社区动态页 -->
+              <view hidden="{{activeIndex != 1}}">
+                <view>
+                  <navigator wx:for="{{ communityInfo }}" url='{{ item.url }}'>
+                    <view class="card" >
+                        <view bindtap="onItemClick">
+                            <image class="image" mode="aspectFill" src="{{ item.img }}"/>
+                            <view class="title">
+                              {{ item.title }}
+                            </view>
+                            <view class="home_community">
+                              <image class="home_community_look_icon" src='{{item.lookIcon}}'>
+                              </image>
+                              <span class="home_community_span">{{ lookAccount }} 浏览</span>
+                              <image class="home_community_join_icon" src='{{ item.joinIcon }}'>
+                              </image>
+                              <span class="home_community_span">{{ item.joinAccount }} 参与</span>
+                            </view>
+                        </view>
+                    </view>
+                  </navigator>
                 </view>
-                <!-- 社区动态页 -->
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <!-- 关注页 -->
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+              </view>
+
+              <!-- 关注页 -->
+              <view  hidden="{{activeIndex != 2}}">
+                <view wx:for="{{ focuses }}" class='home_focus_item' style='background: url("http://img2.imgtn.bdimg.com/it/u=2609961907,2922002159&fm=26&gp=0.jpg") no-repeat; background-size:100% 100%;'>
+                  <image class='home_focus_teacher_img' src='{{ item.img }}'>
+                  </image>
+                  <span class="home_focus_teacher_name">邓老师</span>
+                  <span class="home_focus_teacher_subject">
+                    IBM人生导师
+                  </span>
+                  <view class='home_focus_item_body'>
+                    <view>{{ item.title1 }}</view>
+                    <view>{{ item.title2}}</view>
+                    <view class='home_focus_item_body_button'>
+                      <navigator url="{{ item.url }}"> 
+                        <button class='home_focus_item_button' bindtap='toDetail' data-index='0'>
+                          查看全文 >
+                        </button>
+                      </navigator>
+                    </view>
+                  </view>
+                </view>
+              </view>
             </view>
         </view>
     </view>

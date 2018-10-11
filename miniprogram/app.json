@@ -5,13 +5,12 @@
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/account/account",
     "pages/course/course",
     "pages/information/information",
-    "pages/home/home"
+    "pages/article/article"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

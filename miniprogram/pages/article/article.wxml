@@ -1,0 +1,13 @@
+<!--pages/article/article.wxml-->
+<view class='article'>
+  <view class="article_title">
+    <h2>
+      {{ article.title }}
+    </h2>
+  </view>
+  <view class="article_body">
+    <text>
+      {{ article.articleBody }}
+    </text>
+  </view>
+</view>
