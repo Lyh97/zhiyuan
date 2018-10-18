@@ -9,10 +9,12 @@
     "pages/chooseLib/chooseLib",
     "pages/account/account",
     "pages/course/course",
-    "pages/information/information",
+    "pages/informations/informations",
     "pages/article/article",
     "pages/information/focuson/focuson",
-    "pages/course/courseInfo"
+    "pages/course/courseInfo",
+    "pages/information/contribute/contribute",
+    "pages/informations/message/message"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -38,7 +40,7 @@
         "selectedIconPath": "static/image/course_click.png"
       },
       {
-        "pagePath": "pages/information/information",
+        "pagePath": "pages/informations/informations",
         "text": "消息",
         "iconPath": "static/image/info.png",
         "selectedIconPath": "static/image/info_click.png"

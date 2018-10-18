@@ -1,0 +1,9 @@
+<view>
+  <view wx:for="{{teaspeople}}" style='border-bottom: 1px solid gray'>
+    <view class="peoplelist">
+      <view class='peoimg'>{{item.imgUrl}}</view>
+      <view class='peoname'>{{item.name}}</view>
+      <view class='peoclasses'>{{item.classes}}</view>
+    </view>
+  </view>
+</view>

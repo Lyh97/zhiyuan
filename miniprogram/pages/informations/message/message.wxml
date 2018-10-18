@@ -1,0 +1,27 @@
+<!--pages/informations/message/message.wxml-->
+<view class="con" style="width:100%;">
+  <view class="mess" style="width:100%;">
+    <view class='peoimg'><image src="{{information.imgUrl}}" style='width:100rpx;height:100rpx;'></image></view>
+    <view class="peomess"><view style='width:80%;'>{{information.message}}</view></view>
+  </view>
+  <view wx:if="{{bool}}" class="mess" style='width:100%;'>
+    <view class='userinfo'>
+      <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+      <view class='icon'/>
+    </view>
+     <view class="mypeomess"><view style='width:60%;position:relative;left:20%;font-size:35rpx;'>{{myinfo2}}</view></view>
+  </view>
+  <view style='width:100%;position:absolute;bottom:3rpx;'>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+          <view style='width:70rpx;'>🎺</view>
+      </view>
+      <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="回复" bindinput='myinfo1'/>
+      </view>
+      <view class="weui-cell__ft">
+          <view class="weui-vcode-btn" bindtap="send">📧</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -10,7 +10,7 @@
     </view>
   </view>
   <view class="usertype" style="flex-direction:row;">
-    <view class="flex-item"><navigator url='focuson/focuson' hover-class="none">我的关注</navigator></view>
+    <view class="flex-item"><navigator url='contribute/contribute' hover-class="none">我的关注</navigator></view>
     <view class="flex-item"><navigator url='focuson/focuson' hover-class="none">我的收藏</navigator></view>
     <view class="flex-item3"><navigator url='focuson/focuson' hover-class="none">我的下载</navigator></view>
   </view>

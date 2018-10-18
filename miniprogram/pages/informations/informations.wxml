@@ -1,0 +1,13 @@
+<view>
+  <view wx:for="{{datasArray}}">
+  <navigator url='{{item.url}}' hover-class="none">
+    <view class="peoplelist">
+      <view class='peoimg'><image src="{{item.imgUrl}}" style='width:100rpx;height:100rpx;'></image></view>
+      <view class='peoname'>{{item.name}}</view>
+      <view class='peoclasses'>{{item.txt}}</view>
+      <view class='peoright' wx:if="{{item.bool}}"></view>
+      <view class="peoline" style='height:1px;background-color:lightgray;width:80%;'></view>
+    </view>
+  </navigator>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+/* pages/informations/message/message.wxss */
+.peoimg {
+  background-color: blue;
+  float: left;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  position: relative;
+  left: 20rpx;
+  top: 25rpx;
+  overflow: hidden;
+}
+.peomess {
+  background-color: aliceblue;
+  width: 65%;
+  position: relative;
+  top: 25rpx;
+  left: 150rpx;
+  text-align: start;
+  font-size: 35rpx;
+  height: 100rpx;
+}
+
+.userinfo .icon {
+  position: absolute;
+  right: 2%;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 5%;
+}
+
+.mypeomess {
+  background-color: aliceblue;
+  width: 65%;
+  position: absolute;
+  left: 120rpx;
+  text-align: start;
+  font-size: 35rpx;
+  height: 100rpx;
+  float: left;
+  margin-top: 5%;
+}

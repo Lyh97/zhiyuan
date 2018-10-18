@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    i: 0,
     title: {
       Name: "", imgUrl: "", title: "",classtitleArray:[]
     },
